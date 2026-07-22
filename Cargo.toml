@@ -1,0 +1,11 @@
+[package]
+name = "Starling-Web"
+version = "0.1.0"
+edition = "2024"
+license = "Apache-2.0"
+description = "Web client for Starling — a federated p2p communications platform"
+
+[dependencies]
+starling-server = { git = "https://forgejo.hearthhome.lol/Saltfault/Starling-Server.git" }
+anyhow = "1.0"
+tokio = { version = "1", features = ["full"] }
