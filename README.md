@@ -14,11 +14,11 @@ Starling with nothing to install: open a page, paste an invite code, and you're 
 
 ## How it's built (planned)
 
-The **same Solid.JS frontend** as the desktop and Android clients, delivered in the browser instead of a Tauri shell — so the UI is shared across all three. The [`starling-server`](https://forgejo.hearthhome.lol/Saltfault/Starling-Server) core is compiled to **WebAssembly** to run in-page. The interesting engineering is in the browser's constraints, not the protocol.
+The **same SolidJS frontend** as the desktop and Android clients, delivered in the browser instead of a Tauri shell — so the UI is shared across all three. The [`starling-server`](https://forgejo.hearthhome.lol/Saltfault/Starling-Server) core is compiled to **WebAssembly** to run in-page. The interesting engineering is in the browser's constraints, not the protocol.
 
 | Piece | Stack |
 |-------|-------|
-| Frontend | Solid.JS (shared with Desktop + Android) |
+| Frontend | SolidJS (shared with Desktop + Android) |
 | Protocol / networking | [`starling-server`](https://forgejo.hearthhome.lol/Saltfault/Starling-Server) core, compiled to `wasm32` |
 | Transport note | iroh over the browser uses WebTransport/relays; the datagram-vs-stream media paths may need browser-specific handling |
 | Media | `getUserMedia` for mic/camera; WASM Opus for audio |
